@@ -1,5 +1,6 @@
 # Vagrant-IaC
-This project demonstrates the automation of provisioning and configuration using Vagrant. It sets up a CentOS Stream 9 virtual machine, installs essential tools (httpd, wget, unzip, git), deploys a sample website (Mini Finance template), and creates a functioning web server. 
+"This is a small project to practice automation using Vagrant. It involves setting up a CentOS Stream 9 virtual machine, automating the installation of essential tools (httpd, wget, unzip, git), deploying a sample website (Mini Finance template), and configuring a functional web server.
+
 # Automated Vagrant Environment for Web Server Setup
 
 ## Project Overview
