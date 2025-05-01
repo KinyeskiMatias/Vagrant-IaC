@@ -23,3 +23,36 @@ This project uses Vagrant to automate the setup and provisioning of a CentOS Str
    ```bash
    git clone <your-repository-url>
    cd <your-repository-folder>
+
+Vagrantfile explanation:
+
+# Dependencies
+yum install httpd wget unzip git -y
+
+# Starting httpd
+systemctl start httpd
+
+# Enabling httpd
+systemctl enabled httpd
+
+# Creating a temp dir
+mkdir -p /tmp/finance
+
+# Cd into the new dir
+cd /tmp/finance
+
+# Template download
+wget https://www.tooplate.com/zip-templates/2135_mini_finance.zip
+
+# Unziping
+unzip -o 2135_mini_finance.zip
+
+# Moving files to /var/www/html/
+cp -r 2135_mini_finance/* /var/www/html/
+
+# httpd restart
+systemctl restart httpd
+
+# Removing temp dir
+cd /tmp/
+rm -rf /tmp/finance
